@@ -1,0 +1,27 @@
+Quick and dirty HTTP echo server for REST requests using Gevent.
+===============================================================
+
+Based on gevent http example.
+
+To use it you need libevent, which is already installed in many
+nix environments, but:
+
+libevent 1.4 only supports GET/POST
+libevent 2 supports GET/POST/PUT/DELETE
+
+to use just run:
+    python echoHTTPserver.py
+
+it prints to stout_
+    METHOD URI POST_DATA
+
+and returns a full RESPONSE.
+the method and uri can be found in the header,
+the response body is json data containing the POST_DATA
+variables that was sent in the request.
+
+Altough made for testing REST clients with simple data
+its easy to change for other testing uses.
+
+depends on:
+    gevent : pip install gevent # needs libevent-dev to compile dependencies
