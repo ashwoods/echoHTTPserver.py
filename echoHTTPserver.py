@@ -41,4 +41,4 @@ def callback(request):
     request.send_reply(200, "OK", '%s' % body)
 
 print 'Serving on 8000...'
-http.HTTPServer(('0.0.0.0', 8000), callback).serve_forever():w
+http.HTTPServer(('0.0.0.0', 8000), callback).serve_forever()
